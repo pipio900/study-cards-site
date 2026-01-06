@@ -1,0 +1,154 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    background: linear-gradient(160deg, #1e3f66, #3b82c4);
+    background-attachment: fixed;
+
+    color: white;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+
+    border-radius: 10px;
+    border: 1px solid #bcd6ed;
+
+    background: #e6f0fa;
+}
+
+/* Buttons */
+
+button {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+
+    border-radius: 10px;
+    border: none;
+
+    background: #2c6aa0;
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.menu button {
+    width: auto;
+    margin: 5px;
+}
+
+/* Flashcard */
+
+.card {
+    background: #e6f0fa;
+    padding: 30px;
+
+    margin: 15px auto;
+    width: 90%;
+    border-radius: 15px;
+
+    cursor: pointer;
+    color: #1e3f66;
+
+    transition: transform 0.5s ease, background 0.3s ease;
+}
+
+/* 3D flip effect */
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+/* Quiz options */
+
+.option {
+    background: #e6f0fa;
+    padding: 15px;
+
+    margin: 10px auto;
+    width: 90%;
+
+    border-radius: 15px;
+    cursor: pointer;
+    color: #1e3f66;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.option:hover {
+    transform: scale(1.03);
+}
+
+/* Notifications by colors */
+
+.option.correct {
+    background: #4caf50;
+    color: white;
+}
+
+.option.wrong {
+    background: #d32f2f;
+    color: white;
+}
+
+/* Card list */
+
+.card-item {
+    background: white;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    color: #1e3f66;
+}
+
+.delete-btn {
+    background: #b23a3a;
+    color: white;
+    width: auto;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+/* Score */
+
+.score {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Mobile adaptation */
+
+@media (min-width: 768px) {
+    .container {
+        width: 60%;
+    }
+
+    input, textarea {
+        width: 70%;
+    }
+
+    .card, .option {
+        width: 70%;
+    }
+}

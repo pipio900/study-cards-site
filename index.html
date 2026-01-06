@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Cards App</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Study Cards App</h1>
+
+<div class="menu">
+    <button onclick="setMode('cards')">Flashcards Mode</button>
+    <button onclick="setMode('quiz')">Quiz Mode</button>
+    <button onclick="exitGame()">Exit Game</button>
+</div>
+
+<h2>Create a new card</h2>
+
+<input id="question" placeholder="Enter question or term">
+<textarea id="answer" placeholder="Enter answer or definition"></textarea>
+
+<button onclick="addCard()">Add Card</button>
+
+<hr>
+
+<div id="gameArea"></div>
+
+<div class="card-list">
+    <h2>Your Cards List</h2>
+    <div id="cardsList"></div>
+</div>
+
+<div id="quizScore" class="score"></div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
